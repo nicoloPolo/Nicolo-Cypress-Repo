@@ -1,4 +1,4 @@
-describe("Add cars", () => {
+describe("Checking elements on page", () => {
   const username = Cypress.env("username");
   const password = Cypress.env("password");
   before(() => {
