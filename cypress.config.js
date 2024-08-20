@@ -9,6 +9,8 @@ module.exports = defineConfig({
     env: {
       username: "guest",
       password: "welcome2qauto",
+      loginEmail: "Nicolo@mail.com",
+      loginPassword: "Pass123!",
     },
   },
 });

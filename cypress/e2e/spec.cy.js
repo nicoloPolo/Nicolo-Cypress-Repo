@@ -12,7 +12,11 @@ describe("Add cars", () => {
     cy.url().should("eq", `${Cypress.config("baseUrl")}/panel/garage`);
     cy.get("button.btn.btn-primary", { timeout: 1000 }).click();
     cy.get('label[for="addCarBrand"]').should("be.visible");
-    cy.get("input#addCarMileage").type(Math.random());
+
+    cy.get("select#addCarBrand").select("BMW");
+    cy.get("select#addCarModel").select("X6");
+
+    cy.get("input#addCarMileage").type(Math.random() * 100000) + 1;
     cy.get("div.modal-content")
       .find("button.btn.btn-primary")
       .should("be.enabled")
