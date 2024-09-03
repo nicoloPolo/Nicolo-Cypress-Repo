@@ -6,6 +6,15 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: "https://qauto.forstudy.space",
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports/mochawesome",
+      overwrite: false,
+      html: true,
+      json: true,
+      charts: true,
+    },
+    chromeWebSecurity: false,
     env: {
       username: "guest",
       password: "welcome2qauto",
